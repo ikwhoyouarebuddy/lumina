@@ -1876,21 +1876,24 @@ function menulib:addlabel(sectiondata, text)
 
 	local row = makeinst("Frame", {
 		Parent               = sectiondata.body,
-		Size                 = UDim2.new(1, 0, 0, 24),
+		Size                 = UDim2.new(1, 0, 0, 0),
+		AutomaticSize        = Enum.AutomaticSize.Y,
 		BackgroundTransparency = 1,
 		BorderSizePixel      = 0,
 		LayoutOrder          = layoutorder,
 	})
 	local lbl = makeinst("TextLabel", {
 		Parent               = row,
-		Size                 = UDim2.new(1, -24, 1, 0),
-		Position             = UDim2.new(0, 12, 0, 0),
+		Size                 = UDim2.new(1, -24, 0, 0),
+		AutomaticSize        = Enum.AutomaticSize.Y,
+		Position             = UDim2.new(0, 12, 0, 4),
 		BackgroundTransparency = 1,
 		Text                 = text,
 		TextColor3           = theme.textdim,
 		Font                 = fonts.regular,
 		TextSize             = 11,
 		TextXAlignment       = Enum.TextXAlignment.Left,
+		TextYAlignment       = Enum.TextYAlignment.Top,
 		TextWrapped          = true,
 	})
 
