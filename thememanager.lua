@@ -512,6 +512,8 @@ local function syncel(el, color)
 end
 
 function thememanager.inject(menu, tab, ontheme)
+	if menu._themeinjected then return end
+	menu._themeinjected = true
 	local themeorder = {}
 	for key, t in pairs(themes) do table.insert(themeorder, { key = key, name = t.name }) end
 	table.sort(themeorder, function(a, b) return a.name < b.name end)
