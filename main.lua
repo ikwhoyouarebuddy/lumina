@@ -86,6 +86,11 @@ function menulib.new(title, subtext)
 		BorderSizePixel  = 0,
 		ClipsDescendants = true,
 	})
+	self.rootstroke = makeinst("UIStroke", {
+		Parent    = self.root,
+		Color     = theme.accent,
+		Thickness = 1,
+	})
 	self.titlebar = makeinst("Frame", {
 		Parent           = self.root,
 		Size             = UDim2.new(1, 0, 0, 36),
