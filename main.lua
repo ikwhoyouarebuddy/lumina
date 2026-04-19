@@ -1,3 +1,55 @@
+--[[
+
+                                                          
+                                                                          
+88                                           88                           
+88                                           ""                           
+88                                                                        
+88          88       88  88,dPYba,,adPYba,   88  8b,dPPYba,   ,adPPYYba,  
+88          88       88  88P'   "88"    "8a  88  88P'   `"8a  ""     `Y8  
+88          88       88  88      88      88  88  88       88  ,adPPPPP88  
+88          "8a,   ,a88  88      88      88  88  88       88  88,    ,88  
+88888888888  `"YbbdP'Y8  88      88      88  88  88       88  `"8bbdP"Y8  
+                                                                                                 
+
+Hi, 99.lua here. Welcome to the mess that is lumina's source code.
+
+Yes, i tablemaxx. No, i'll never stop tablemaxxing.
+
+Most content in tables i've alignment padded for ease-of-access. 
+For example, the defaulttheme table just below this comment has padding just to make it more readable. 
+I follow this pattern throughout all of this ui for things other than tables, too.
+
+You are allowed to fork this and edit whatever you want for your script. Credits would be appreciated, but I know how you guys are.
+
+
+            ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤╝ FILES ╚⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+                                       
+      main.lua          | the ui library itself. menus, tabs, sections, elements. you're reading it.                                                                                              
+      notification.lua  | standalone toast notifications. works independently, no menu required.
+      thememanager.lua  | injectable theme/color editor. drops a Theme and Colors section into any tab.
+      configmanager.lua | injectable config system. save/load/delete profiles. also handles autoload. credits to linoria, the father of all ui.
+
+     >> ** example.lua  | a full usage example. read this first if you're lost. ** <<
+
+            ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤╝ How to load them ╚⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+
+      local menulib       = loadstring(game:HttpGet("https://raw.githubusercontent.com/ikwhoyouarebuddy/lumina/refs/heads/main/main.lua"))()
+      local notiflib      = loadstring(game:HttpGet("https://raw.githubusercontent.com/ikwhoyouarebuddy/lumina/refs/heads/main/notification.lua"))()
+      local thememanager  = loadstring(game:HttpGet("https://raw.githubusercontent.com/ikwhoyouarebuddy/lumina/refs/heads/main/thememanager.lua"))()
+      local configmanager = loadstring(game:HttpGet("https://raw.githubusercontent.com/ikwhoyouarebuddy/lumina/refs/heads/main/configmanager.lua"))()
+
+            ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤╝ Credits ╚⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+
+      made by 99.lua
+      discord: 99.lua
+      discord server: discord.gg/flowcc
+
+      "if something's broken blame roblox, not me."
+
+]]
+
+-- lets begin 
 local menulib = {}
 menulib.__index = menulib
 
